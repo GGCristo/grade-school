@@ -37,6 +37,9 @@ export class GradeSchool {
    * @param {number} grade - grade of the new student
    */
   add(name, grade) {
+    if (!Number.isInteger(grade) || grade < 0) {
+      throw Error ('Number must be a positive integer');
+    }
     this.findAndDelete(name);
     if (!(grade in this.students)) {
       this.students[grade] = [name];

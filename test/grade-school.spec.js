@@ -89,4 +89,11 @@ describe('School', () => {
 
     expect(school.grade(2)).to.eql([]);
   });
+  describe.skip('Misuse', () => {
+    it('Float number shouldn\'t be allowed', () => {
+      expect(function() {
+        school.add('Kurisuto', 5.3);
+      }).to.throw('Number must be a positive integer');
+    });
+  });
 });
