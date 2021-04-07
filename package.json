@@ -13,7 +13,6 @@
     "test": "mocha",
     "coverage": "c8 mocha",
     "codecov": "c8 --reporter=text-lcov mocha && codecov",
-    "watch": "jest --no-cache --watch ./*",
     "lint": "eslint ."
   },
   "license": "MIT",
