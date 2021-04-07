@@ -1,3 +1,16 @@
+/**
+ * Universidad de La Laguna
+ * Escuela Superior de Ingerniería y Tecnología
+ * Grado en Ingenieria Informática
+ * Asignatura Programación de Aplicaciones Interactivas (PAI)
+ * Curso: 3º
+ * Response of board: c8 with coverage
+ * @author Cristo García González
+ * @date 8 Abril 2021
+ * @mail alu0101204512@ull.edu.es
+ * @brief GradeSchool where to store and manipulate a set of grades with unique
+ *   names
+ **/
 'use strict';
 /**
  * Class representing the grades of a school's students
