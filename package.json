@@ -1,0 +1,20 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "c8 mocha",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint ."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "c8": "^7.7.0",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}
