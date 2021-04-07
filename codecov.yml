@@ -1,5 +1,5 @@
 codecov:
-  token: "3baa6b7b-ce11-442c-8d9b-e02c9e4bec59"
+  token: ""
   bot: "codecov-io"
 
 parsers:
