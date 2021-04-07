@@ -1,3 +1,4 @@
+[![codecov](https://codecov.io/gh/GGCristo/grade-school/branch/main/graph/badge.svg?token=16mU4o6kHI)](https://codecov.io/gh/GGCristo/grade-school)
 # Grade School
 
 Given students' names along with the grade that they are in, create a roster
