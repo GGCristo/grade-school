@@ -13,7 +13,7 @@
     "test": "mocha",
     "coverage": "c8 mocha",
     "commented": "c8 --reporter=json mocha && codecov --disable=gcov",
-    "codecov": "c8 --reporter=json mocha",
+    "codecov": "c8 --reporter=lcov mocha",
     "lint": "eslint ."
   },
   "license": "MIT",
