@@ -1,5 +1,6 @@
 codecov:
   token: "638bdacd-31b7-4987-9227-f970c433067c"
+    max_report_age: off
 
 parsers:
   javascript:
