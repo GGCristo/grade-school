@@ -2,9 +2,10 @@ name: Coverage
 on: push
 
 jobs:
-  Coverage:
-    name: Coverage
+  Codecove:
+    name: Codecove
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci && npm run coverage
+      - run: npm ci && npm run codecove
+      - uses: codecov/codecov-action@v1
