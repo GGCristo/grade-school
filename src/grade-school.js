@@ -15,7 +15,7 @@
 /**
  * Class representing the grades of a school's students
  */
-export class GradeSchool {
+class GradeSchool {
   /**
    * Initialize the array that will contains "pairs"(name, grade)
    */
@@ -78,3 +78,5 @@ export class GradeSchool {
     }
   };
 };
+
+module.exports = GradeSchool;

@@ -1,5 +1,5 @@
 {
-  "type": "module",
+  
   "devDependencies": {
     "eslint": "^7.23.0",
     "eslint-config-google": "^0.14.0",
@@ -12,8 +12,9 @@
   "scripts": {
     "test": "mocha",
     "coverageText": "c8 mocha",
-    "codecov": "c8 --reporter=lcov mocha && codecov --disable=gcov",
-    "coverage": "c8 --reporter=lcov --reporter=text mocha",
+    "codecov": "c8 --reporter=text-lcov mocha && codecov --disable=gcov",
+    "coveralls": "c8 --reporter=text-lcov mocha | coveralls",
+    "coverage": "c8 --reporter=text-lcov --reporter=text mocha",
     "lint": "eslint ."
   },
   "license": "MIT",
@@ -21,6 +22,7 @@
     "c8": "^7.7.1",
     "chai": "^4.3.4",
     "codecov": "^3.8.1",
+    "coveralls": "^3.1.0",
     "mocha": "^8.3.2"
   }
 }

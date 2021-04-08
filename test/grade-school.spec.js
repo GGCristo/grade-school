@@ -1,9 +1,10 @@
 
 
 'use strict';
-import {expect} from 'chai';
-import {GradeSchool} from '../src/grade-school.js';
-
+// import {expect} from 'chai';
+// import {GradeSchool} from '../src/grade-school.js';
+const {expect} = require('chai');
+const GradeSchool = require('../src/grade-school.js');
 
 describe('School', () => {
   let school;
