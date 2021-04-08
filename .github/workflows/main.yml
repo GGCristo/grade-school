@@ -11,6 +11,7 @@ jobs:
       - name: Codecov
         uses: codecov/codecov-action@v1
         with:
+          token: ${{ secrets.CODECOV_TOKEN }} 
           files: ./coverage/lcov.info
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.2
