@@ -12,3 +12,4 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           files: ./coverage/lcov.info
+          name: Codecov-github-action
