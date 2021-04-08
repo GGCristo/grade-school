@@ -12,7 +12,7 @@
   "scripts": {
     "test": "mocha",
     "coverage": "c8 mocha",
-    "coverageReport": "c8 --reporter=lcov-text mocha",
+    "coverageReport": "c8 --reporter=lcov mocha",
     "codecov": "c8 --reporter=lcov mocha && codecov",
     "coveralls": "c8 --reporter=text-lcov mocha | coveralls",
     "lint": "eslint ."
