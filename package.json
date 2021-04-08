@@ -7,13 +7,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GGCristo/grade-school.git"
+    "url": "https://github.com/GGCristo/grade-school.git"
   },
   "scripts": {
     "test": "mocha",
     "coverage": "c8 mocha",
-    "commented": "c8 --reporter=json mocha && codecov --disable=gcov",
-    "codecov": "c8 --reporter=lcov mocha",
+    "commented": "c8 --reporter=lcov mocha && codecov --disable=gcov",
+    "codecov": "c8 --reporter=lcov --reporter= test mocha",
     "lint": "eslint ."
   },
   "license": "MIT",
