@@ -10,8 +10,9 @@ jobs:
       - run: npm ci && npm run coverage
       - name: Codecov
         uses: codecov/codecov-action@v1
+        with:
+          path_to_write_report: ./coverage/lcov.info
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@v1.1.2
         with:
           github-token: ${{ secrets.COVERALL }}
-          path_to_write_report: ./coverage/lcov.info
