@@ -13,3 +13,7 @@ jobs:
         with:
           files: ./coverage/lcov.info
           name: Codecov-github-action
+  - name: Coveralls
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.COVERALL }} 
