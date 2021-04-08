@@ -13,11 +13,16 @@ Ejecuta c8 para ver los coverage en una tabla en local\
  \
  ``"codecov": "c8 --reporter=lcov mocha && codecov",`` \
  Ejecuta el codecov del último commit sin tener que hacer push \
+ __Nota:__ Tienen que tener el token en codecov.yml, como se mostró en la presentación de Marta y Vanessa\
+ Si no quieren tener un codecov.yml distinto al por defecto y no subir el token al repositorio pueden usar esta otra sintaxis: ``bash <(curl -s https://codecov.io/bash) -t token`` [[enlace](https://docs.codecov.io/docs/about-the-codecov-bash-uploader)] \
  \
  ``"coveralls": "c8 --reporter=text-lcov mocha | coveralls",`` \
  Ejecuta el coverall del último commit sin tener que hacer push\
  \
- ``"lint": "eslint ."`` Ejecuta eslint en la línea de comandos.
+ ``"lint": "eslint ."`` Ejecuta eslint en la línea de comandos.\
+ \
+ __Diferencias entre ``lcov`` y ``lcov-text``__ [[enlace](https://github.com/istanbuljs/nyc/issues/744#issuecomment-359335029)]:\
+ Estos son argumentos que existen tanto en ``nyc`` como en ``c8``, la diferencia esta en que ``lcoc-text`` retorna el reporte para que sirva de output a otros comandos (con unn pipe(tubería) por ejemplo), mientras que ``lcov`` tiene el comportamiento más esperado de escribir en disco, por lo que más tarde otros programas pueden leer de un fichero.
  ## Actions
 ~~~
 name: Coverage
@@ -47,7 +52,7 @@ Haz una instalación limpia en la máquina virtual y escribe los reportes/inform
 Sube los reportes a CodeCov\
 \
 ``files: ./coverage/lcov.info``\
-No es necesario especificar los repotes CodeCov ya lo hace por ti pero ``... --reporter=lcov ...`` me generaba un reporte extra temporal, y solo me interesa que se suba uno.\
+No es necesario especificar los reportes CodeCov ya lo hace por ti pero ``... --reporter=lcov ...`` me generaba un reporte extra temporal, y solo me interesa que se suba uno.\
 \
 ``token: ${{ secrets.CODECOV_TOKEN }}`` \
 En repositorios públicos no es necesario subir un token, pero quería hacerlo lo suficientemente generíco para que funcione en ambos.
