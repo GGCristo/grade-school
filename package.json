@@ -11,9 +11,9 @@
   },
   "scripts": {
     "test": "mocha",
-    "coverageText": "c8 mocha",
-    "codecov": "c8 --reporter=lcov mocha && codecov --disable=gcov",
-    "coverage": "c8 --reporter=lcov --reporter=text mocha",
+    "coverage": "c8 mocha",
+    "coverageReport": "c8 --reporter=lcov mocha",
+    "codecov": "c8 --reporter=lcov mocha && codecov",
     "coveralls": "c8 --reporter=text-lcov mocha | coveralls",
     "lint": "eslint ."
   },

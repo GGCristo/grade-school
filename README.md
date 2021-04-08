@@ -1,5 +1,42 @@
 [![codecov](https://codecov.io/gh/GGCristo/grade-school/branch/master/graph/badge.svg?token=bnONakHC75)](https://codecov.io/gh/GGCristo/grade-school)
 [![Coverage Status](https://coveralls.io/repos/github/GGCristo/grade-school/badge.svg?branch=master)](https://coveralls.io/github/GGCristo/grade-school?branch=master)
+# Explicación
+## Scripts:
+``"test": "mocha",`` Corre los test con mocha
+``"coverage": "c8 mocha",`` Ejecuta c8 para ver los coverage en una tabla en local
+ ``"coverageReport": "c8 --reporter=lcov mocha",`` Genera los reporte, este será el input de Codecov (o cualquier otra herramienta del mismo estilo)
+ ``"codecov": "c8 --reporter=lcov mocha && codecov",`` Ejecuta el codecov del último commit sin tener que hacer push
+ ``"coveralls": "c8 --reporter=text-lcov mocha | coveralls",`` Ejecuta el coverall del último commit sin tener que hacer push
+ ``"lint": "eslint ."`` Ejecuta eslint en la línea de comandos.
+ ## Actions
+~~~
+name: Coverage
+on: push
+
+jobs:
+  Codecov:
+    name: Codecov
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm ci && npm run coverageReport
+      - name: Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} 
+          files: ./coverage/lcov.info
+      - name: Coveralls
+        uses: coverallsapp/github-action@v1.1.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+~~~
+``npm ci && npm run coverageReport`` Haz una instalación limpia en la máquina virtual y escribe los reportes/informes.
+``uses: codecov/codecov-action@v1`` Sube los reportes a CodeCov
+``files: ./coverage/lcov.info`` No es necesario especificar los repotes CodeCov ya lo hace
+por ti pero ``... --reporter=lcov ...`` me generaba un reporte extra temporal, y solo me interesa que se suba uno.
+``token: ${{ secrets.CODECOV_TOKEN }}`` En repositorios públicos no es necesario subir un token, pero quería hacerlo lo suficientemente generíco para que funcione en ambos.
+Al subir un token a un repositorio publico es recomendado ocultarlo, por lo que use las ´´secrets´´ de Github.
+
 # Grade School
 
 Given students' names along with the grade that they are in, create a roster
