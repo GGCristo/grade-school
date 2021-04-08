@@ -1,9 +1,3 @@
-codecov:
-    max_report_age: off
-
 parsers:
   javascript:
     enable_partials: yes
-
-ignore:
-  - "./coverage/tmp/*"
