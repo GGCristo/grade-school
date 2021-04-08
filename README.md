@@ -1,4 +1,5 @@
 [![codecov](https://codecov.io/gh/GGCristo/grade-school/branch/main/graph/badge.svg?token=16mU4o6kHI)](https://codecov.io/gh/GGCristo/grade-school)
+[![Coverage Status](https://coveralls.io/repos/github/GGCristo/grade-school/badge.svg?branch=master)](https://coveralls.io/github/GGCristo/grade-school?branch=master)
 # Grade School
 
 Given students' names along with the grade that they are in, create a roster
