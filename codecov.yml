@@ -6,4 +6,4 @@ parsers:
     enable_partials: yes
 
 ignore:
-  - "coverage/tmp"
+  - "coverage/tmp/"
