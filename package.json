@@ -14,6 +14,7 @@
     "coverageText": "c8 mocha",
     "codecov": "c8 --reporter=lcov mocha && codecov --disable=gcov",
     "coverage": "c8 --reporter=lcov --reporter=text mocha",
+    "coveralls": "c8 --reporter=text-lcov mocha | coveralls",
     "lint": "eslint ."
   },
   "license": "MIT",
