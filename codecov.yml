@@ -1,7 +1,9 @@
 codecov:
   token: "638bdacd-31b7-4987-9227-f970c433067c"
-  bot: "codecov-io"
 
 parsers:
   javascript:
     enable_partials: yes
+
+ignore:
+  - "coverage/tmp"
