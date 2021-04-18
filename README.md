@@ -14,7 +14,7 @@ Ejecuta c8 para ver los coverage en una tabla en local\
  ``"codecov": "c8 --reporter=lcov mocha && codecov",`` \
  Ejecuta el codecov del último commit sin tener que hacer push \
  __Nota:__ Tienen que tener el token en codecov.yml, como se mostró en la presentación de Marta y Vanessa\
- Si no quieren tener un codecov.yml distinto al por defecto y no subir el token al repositorio pueden usar esta otra sintaxis: ``bash <(curl -s https://codecov.io/bash) -t token`` [[enlace](https://docs.codecov.io/docs/about-the-codecov-bash-uploader)] \
+ Si quieren tener un codecov.yml distinto al por defecto y no subir el token al repositorio pueden usar esta otra sintaxis: ``bash <(curl -s https://codecov.io/bash) -t token`` [[enlace](https://docs.codecov.io/docs/about-the-codecov-bash-uploader)] \
  \
  ``"coveralls": "c8 --reporter=text-lcov mocha | coveralls",`` \
  Ejecuta el coverall del último commit sin tener que hacer push\
